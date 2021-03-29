@@ -26,10 +26,6 @@ public class GalleryActivity extends ActionMenuActivity {
 
         galleryObject = new GalleryObject(this);
 
-        View inflater = getLayoutInflater().inflate(R.layout.row_layout, null);
-        TextView textView = inflater.findViewById(R.id.text);
-        ImageView imageView = inflater.findViewById(R.id.image);
-
         gridView = (GridView) findViewById(R.id.gridView);
         customAdapter = new GalleryObject.gridViewAdapter(this, R.layout.row_layout, galleryObject.getData(), R.id.text, R.id.image);
         gridView.setAdapter(customAdapter);
